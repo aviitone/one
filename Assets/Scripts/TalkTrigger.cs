@@ -13,7 +13,7 @@ public class TalkTrigger : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (Collider.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "Player")
         {
             inrange = true;
         }
@@ -21,7 +21,7 @@ public class TalkTrigger : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (Collider.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "Player")
         {
             inrange = false;
         }
