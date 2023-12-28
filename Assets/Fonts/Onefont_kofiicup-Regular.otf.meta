@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 9ae89d794d731b847bbef8b46b4d497d
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Onefont_kofiicup
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: e19bdd5b9608b4249bdcd7397e063847, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
