@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class Talk : MonoBehaviour
 {
@@ -33,6 +34,7 @@ public class Talk : MonoBehaviour
                 StopAllCoroutines();
                 textComp.text = lines[index];
                 source.PlayOneShot(clip);
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
             }
         }
     }
