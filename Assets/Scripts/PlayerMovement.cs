@@ -8,7 +8,7 @@ public class PlayerMovement : MonoBehaviour
 {
     private Input01 input = null;
     private Vector2 moveVector = Vector2.zero;
-    private Rigidbody2D rb = null;
+    public Rigidbody2D rb = null;
 
     [SerializeField] public float MoveSpeed;
     private void Awake()
