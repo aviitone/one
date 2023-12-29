@@ -5,6 +5,8 @@ using UnityEngine;
 public class PlayerAim : MonoBehaviour
 {
     private Transform aimTransf;
+    private Input01 playerInput;
+    private GameObject bullet;
 
     //Mouse position code by Hugo Cardoso
     public static Vector3 GetMousePosition()
@@ -30,9 +32,10 @@ public class PlayerAim : MonoBehaviour
     private void Awake()
     {
         aimTransf = transform.Find("RotationPoint");
+        bullet = GameObject.Find("Bullet");
     }
 
-    private void Update()
+    private void Aim()
     {
         //Rotating the gun :O
         Vector3 mousePosition = GetMousePosition();
@@ -40,7 +43,19 @@ public class PlayerAim : MonoBehaviour
         Vector3 aimDirection = (mousePosition - transform.position).normalized;
         float angle = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg;
         aimTransf.eulerAngles = new Vector3(0, 0, angle);
+    }
 
-        Debug.Log(angle);
+    private void Shoot()
+    {
+        if (Input.GetKeyDown(KeyCode.Mouse0))
+        {
+            Debug.Log("bang! >:3");
+        }
+    }
+
+    private void Update()
+    {
+        Aim();
+        Shoot();
     }
 }
